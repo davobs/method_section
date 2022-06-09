@@ -1,0 +1,77 @@
+
+/*Method section style*/
+
+.method {
+	margin-top: 40px;
+}
+
+.method {
+	margin-bottom: 30px;
+}
+
+.method p, .method .method_content {
+	display: none; 
+}
+
+.method-all p, .method-all .method_content {
+	display: block !important;
+}
+
+.method .method_heading {
+	border-radius: 11px;
+	gap: 0;
+	cursor: pointer;
+}
+
+.method .method_text {
+	cursor: pointer;
+    margin: 0;
+}
+
+.method .method_text {
+	margin-bottom: 0;
+	padding-right: 30px;
+	position: relative;
+	width: 100%;
+}
+
+.method-less .method_text::after {
+	transform: rotate(180deg);
+}
+
+.method .method_text::after {
+	content: '';
+	position: absolute;
+	right: 15px;
+    top: 12px;
+	background: url(/wp-content/plugins/method_section/arrow-down.png);
+	width: 15px;
+	height: 15px;
+	background-size: 100%;
+}
+
+
+@media screen and (max-width: 767px){
+	
+	.method {
+		margin-bottom: 0px !important;
+	}
+
+    .method_heading {
+        flex-direction: row;
+    }
+	
+	.method .method_heading svg {
+		max-width: 40px;
+		padding: 0 0 0 10px;
+	}
+	
+	.method .method_text {
+		font-size: 16px !important;
+		margin-bottom: 0;
+		padding-right: 30px;
+		position: relative;
+		font-weight: 500;
+		width: 100%;
+	}
+}
